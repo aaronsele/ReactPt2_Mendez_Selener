@@ -4,8 +4,8 @@ import './Cita.css'
 function Cita(){
     return(
 <>
-<div classname="caja">
-<div classname="info">
+<div classname='caja'>
+<div classname='info'>
 <p>Mascota: Nina</p>
 <p>Dueño: Martin</p>
 <p>Fecha: 2021-08-05</p>
@@ -15,8 +15,8 @@ function Cita(){
 </div>
 </div>
 
-<div classname="caja">
-<div classname="info">
+<div classname='caja'>
+<div classname='info'>
 <p>Mascota: Sifon</p>
 <p>Dueño: Flecha</p>
 <p>Fecha: 2023-08-05</p>
@@ -26,8 +26,8 @@ function Cita(){
 </div>
 </div>
 
-<div classname="caja">
-<div classname="info">
+<div classname='caja'>
+<div classname='info'>
 <p>Mascota: Floki</p>
 <p>Dueño: Ari</p>
 <p>Fecha: 2023-08-05</p>

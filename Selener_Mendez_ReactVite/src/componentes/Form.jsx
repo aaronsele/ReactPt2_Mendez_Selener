@@ -5,7 +5,7 @@ function Form (){
     return (
         <div>     
         <form>
-        <p>Nombre mascota</p>
+        <p classname='tit'>Nombre mascota</p>
     <input type="text" id="nombreMascota" placeholder="Nombre de mascota"></input>
     <p>Nombre dueño</p>
     <input type="text" id="nombreDueño" placeholder="Nombre del dueño"></input>
