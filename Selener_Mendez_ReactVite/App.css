@@ -21,3 +21,108 @@ padding-right: 5%;
   display: flex;
   justify-content: center;
 }
+
+
+
+html {
+  min-height: 100%;
+}
+
+
+
+
+h1,
+h2 {
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+
+  text-transform: uppercase;
+
+  font-family: 'Staatliches', cursive;
+  letter-spacing: 1px;
+}
+
+
+
+.Cita .media {
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 3rem;
+}
+
+.Cita .media:last-of-type {
+  border-bottom: 0;
+}
+
+.Cita.media-body p {
+  margin: 0;
+}
+
+.Cita.media-body button {
+  margin-top: 1rem !important;
+}
+
+.Cita.media-body span {
+  font-weight: bold;
+}
+
+label {
+  color: white;
+}
+
+input[type="date"],
+input[type="time"] {
+  height: 38px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+/*
+.Cita {
+  padding: 2rem;
+  background: white;
+  border-bottom: 1px solid #e1e1e1;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.Cita p {
+  font-weight: bold;
+  margin-bottom: .8rem;
+}
+
+.Cita p span {
+  font-weight: normal;
+
+}
+
+.Cita:first-of-type {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.Cita:last-of-type {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.button.eliminar,
+.button.eliminar:hover {
+  background-color: #c10059;
+  color: white;
+  margin-top: 2rem;
+}
+
+.alerta-error {
+  background-color: white;
+  color: red;
+  padding: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Staatliches', cursive;
+} */

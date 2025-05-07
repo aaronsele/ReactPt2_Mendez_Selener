@@ -1,3 +1,14 @@
 form, .tit {
     color:white;
 }
+
+.enviar, .enviar:hover{
+
+   
+      background-color: #3087d8;
+      color: rgb(35, 221, 206);
+      margin-top: 2rem;
+    
+    
+}
+
