@@ -9,14 +9,14 @@ function App() {
 
     <h1 classname='titulo'>ADMINISTRADOR DE PACIENTES</h1>
 
-    <div className='contenido'>
+    <div class="container">
 
-    <div classname='columna'>
+    <div class="one-half column">
       <h2>CREAR MI CITA</h2>
     <Form/>
     </div>
 
-    <div classname='columna'>
+    <div class="one-half column">
     <h2>ADMINISTRA TUS CITAS</h2>
     <Cita/>
     </div>

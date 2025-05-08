@@ -1,20 +1,26 @@
-.Cita .media {
-    border-bottom: 1px solid #e1e1e1;
-    padding-bottom: 3rem;
-  }
-  
-  .Cita .media:last-of-type {
+  .caja:last-of-type {
     border-bottom: 0;
   }
   
-  .Cita.media-body p {
+  .caja p {
     margin: 0;
   }
   
-  .Cita.media-body button {
+  .caja button {
     margin-top: 1rem !important;
   }
   
-  .Cita.media-body span {
+  .caja span {
     font-weight: bold;
   }
+  .caja {
+    padding: 2rem;
+    background: white;
+    border-bottom: 1px solid #e1e1e1;
+    color: black;
+    margin-bottom: 20px;
+}
+  div {
+    display: block;
+    unicode-bidi: isolate;
+}
