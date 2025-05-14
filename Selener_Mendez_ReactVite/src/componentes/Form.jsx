@@ -1,23 +1,42 @@
 import './Form.css'
 import React, {useState} from 'react';
 
-const Form =({meLlevoValores}) => {
+const Form =({agregarCita}) => {
 
-const [contenido, setContenido] = useState('');
+const [mascota, setMascota] = useState('');
+const [dueño, setDueño] = useState('');
+const [fecha, setFecha] = useState('');
+const [hora, setHora] = useState('');
+const [sintomas, setSintomas] = useState('');
 
 const tomarValores = (e) => {
 e.preventDefault();
-meLlevoValores(contenido);
+
+const nuevaCita = {
+    mascota,
+    dueño,
+    fecha,
+    hora,
+    sintomas,
+  };
+
+ 
+  agregarCita(nuevaCita);
+
+
+  setMascota('');
+  setDueño('');
+  setFecha('');
+  setHora('');
+  setSintomas('');
 }
 
 
+
+
 const detectoCambios = (e) => {
-   setContenido(e.target.value);
+   const {name, value} = e.target;
     }
-
-
-
-
 
 
     return (
