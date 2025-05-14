@@ -1,26 +1,35 @@
 import './Form.css'
-import React from "react";
+import React, {useState} from 'react';
 
-function Form (){
+const Form =({meLlevoValores}) => {
+
+const [contenido, setContenido] = useState('');
+
+const tomarValores = (e) => {
+e.preventDefault();
+meLlevoValores(contenido);
+}
+
+
+const detectoCambios = (e) => {
+   setContenido(e.target.value);
+    }
+
+
+
+
+
+
     return (
-        <div>     
-        <form>
-        <p classname='tit'>Nombre mascota</p>
-    <input type="text" id="nombreMascota" placeholder="Nombre de mascota"></input>
-    <p>Nombre dueño</p>
-    <input type="text" id="nombreDueño" placeholder="Nombre del dueño"></input>
-    <p>Fecha</p>
-
-    <input type="date" id="fecha" ></input>
-    <p>Hora</p>
-    <input type="time" id="hora" ></input>
-    <p>Síntomas</p>
-    <input type="text" id="sintomas"></input>
-    <p></p>
-    <button id="enviar">agregar cita</button> 
       
-
-        </form></div>
+<form onSubmit={tomarValores}>
+<input type="text" placeholder="Nombre de mascota" onChange={detectoCambios} required/>
+<input type="text" placeholder="Nombre del dueño" onChange={detectoCambios} required/>
+<input type="date" placeholder="Fecha" onChange={detectoCambios} required/>
+<input type="time" placeholder="Hora" onChange={detectoCambios} required/>
+<input type="text" placeholder="Síntomas" onChange={detectoCambios} required/>
+<button type="submit">Enviar formulario</button>
+</form>
 
     )
 }
