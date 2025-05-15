@@ -9,18 +9,20 @@ const [fecha, setFecha] = useState('');
 const [hora, setHora] = useState('');
 const [sintomas, setSintomas] = useState('');
 
-const tomarValores = (e) => {
-e.preventDefault();
 
-const nuevaCita = {
+const tomarValores = (e) => {
+  e.preventDefault();
+
+
+  const nuevaCita = {
     mascota,
     dueño,
     fecha,
     hora,
     sintomas,
+    id: Date.now(),
   };
 
- 
   agregarCita(nuevaCita);
 
 
@@ -29,27 +31,49 @@ const nuevaCita = {
   setFecha('');
   setHora('');
   setSintomas('');
-}
+};
 
+return (
+  <form onSubmit={tomarValores}>
+   
+    <input
+      type="text"
+      placeholder="Nombre de mascota"
+      value={mascota}
+      onChange={(e) => setMascota(e.target.value)}
+      required
+    />
+    <input
+      type="text"
+      placeholder="Nombre del dueño"
+      value={dueño}
+      onChange={(e) => setDueño(e.target.value)}
+      required
+    />
+    <input
+      type="date"
+      placeholder="Fecha"
+      value={fecha}
+      onChange={(e) => setFecha(e.target.value)}
+      required
+    />
+    <input
+      type="time"
+      placeholder="Hora"
+      value={hora}
+      onChange={(e) => setHora(e.target.value)}
+      required
+    />
+    <input
+      type="text"
+      placeholder="Síntomas"
+      value={sintomas}
+      onChange={(e) => setSintomas(e.target.value)}
+      required
+    />
+    <button type="submit">Enviar formulario</button>
+  </form>
+);
+};
 
-
-
-const detectoCambios = (e) => {
-   const {name, value} = e.target;
-    }
-
-
-    return (
-      
-<form onSubmit={tomarValores}>
-<input type="text" placeholder="Nombre de mascota" onChange={detectoCambios} required/>
-<input type="text" placeholder="Nombre del dueño" onChange={detectoCambios} required/>
-<input type="date" placeholder="Fecha" onChange={detectoCambios} required/>
-<input type="time" placeholder="Hora" onChange={detectoCambios} required/>
-<input type="text" placeholder="Síntomas" onChange={detectoCambios} required/>
-<button type="submit">Enviar formulario</button>
-</form>
-
-    )
-}
-export default Form
+export default Form;

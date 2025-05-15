@@ -1,46 +1,40 @@
 
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './App.css'
 import Form from './src/componentes/Form.jsx'
 import ListaCitas from './src/componentes/ListaCitas.jsx'
+
 function App() {
 
-  const [citas, setCitas] = useState(() => {
-    const citasGuardadas = localStorage.getItem('citas');
-    return citasGuardadas ? JSON.parse(citasGuardadas) : [];
-  });
+  const [citas, setCitas] = useState([]);
 
 const agregarCita = (cita) => {
   setCitas([...citas, cita]);
 };
 
-useEffect(() => {
-  localStorage.setItem('citas', JSON.stringify(citas));
-}, [citas]);
+const eliminarCita = (id) => {
+  const nuevasCitas = citas.filter((cita) => cita.id !== id);
+  setCitas(nuevasCitas);
+};
 
 
   return (
     <>
+      <h1 className='titulo'>ADMINISTRADOR DE PACIENTES</h1>
 
-    <h1 className='titulo'>ADMINISTRADOR DE PACIENTES</h1>
+      <div className="container">
+        <div className="one-half column">
+          <h2>CREAR MI CITA</h2>
+          <Form agregarCita={agregarCita} />
+        </div>
 
-    <div class="container">
-
-    <div class="one-half column">
-      <h2>CREAR MI CITA</h2>
-    <Form  agregarCita = {agregarCita}/>
-    </div>
-
-    <div class="one-half column">
-    <h2>ADMINISTRA TUS CITAS</h2>
-    <ListaCitas citas={citas} />
-
-    </div>
-
-    </div>
-  
+        <div className="one-half column">
+          <h2>ADMINISTRA TUS CITAS</h2>
+          <ListaCitas citas={citas} eliminarCita={eliminarCita} />
+        </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

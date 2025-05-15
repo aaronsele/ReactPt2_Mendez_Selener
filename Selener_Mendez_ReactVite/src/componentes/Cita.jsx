@@ -1,19 +1,18 @@
-import React, {useState} from "react";
+import React from "react";
 import './Cita.css'
 
-function Cita(){
-    return(
-<div class="caja">
-
-<p>Mascota: Nina</p>
-<p>Dueño: Martin</p>
-<p>Fecha: 2021-08-05</p>
-<p>Hora: 08:20</p>
-<p>Sintomas: Le duele la pierna</p>
-<button>Eliminar X</button>
-
-</div>
-    )
-}
-
-export default Cita
+function Cita({ cita, eliminarCita }) {
+    return (
+      <div className="caja">
+        <p><strong>Mascota:</strong> {cita.mascota}</p>
+        <p><strong>Dueño:</strong> {cita.dueño}</p>
+        <p><strong>Fecha:</strong> {cita.fecha}</p>
+        <p><strong>Hora:</strong> {cita.hora}</p>
+        <p><strong>Síntomas:</strong> {cita.sintomas}</p>
+        <button onClick={() => eliminarCita(cita.id)}>Eliminar X</button>
+      </div>
+    );
+  }
+  
+  export default Cita;
+  
