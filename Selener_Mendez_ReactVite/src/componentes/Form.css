@@ -1,25 +1,29 @@
-form, .tit {
-    color:white;
+
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  max-width: 450px; 
+  margin: 0 auto; /* Centra horizontal */
+  padding: 20px;
 }
 
-.enviar, .enviar:hover{
-
-   
-      background-color: #3087d8;
-      color: rgb(35, 221, 206);
-      margin-top: 2rem;
-    
-    
+.formulario input,
+.formulario button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-input[type="date"],
-input[type="time"] {
-  height: 38px;
-  padding: 6px 10px;
-  background-color: #fff;
-  border: 1px solid #D1D1D1;
-  border-radius: 4px;
-  box-shadow: none;
-  box-sizing: border-box;
+.formulario button {
+  background-color: skyblue;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
+.formulario button:hover {
+  background-color: lightblue;
+}

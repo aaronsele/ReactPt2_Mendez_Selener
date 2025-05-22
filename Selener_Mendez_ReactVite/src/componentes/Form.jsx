@@ -34,7 +34,7 @@ const tomarValores = (e) => {
 };
 
 return (
-  <form onSubmit={tomarValores}>
+  <form className="formulario" onSubmit={tomarValores}>
    
     <input
       type="text"
@@ -71,7 +71,7 @@ return (
       onChange={(e) => setSintomas(e.target.value)}
       required
     />
-    <button type="submit">Enviar formulario</button>
+    <button type="submit">Agregar cita</button>
   </form>
 );
 };

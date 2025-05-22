@@ -20,7 +20,10 @@ const eliminarCita = (id) => {
 
   return (
     <>
-      <h1 className='titulo'>ADMINISTRADOR DE PACIENTES</h1>
+    <div className="todisimo">
+    <h1 className='titulo'>ADMINISTRADOR DE PACIENTES</h1>
+    <div className="todo">
+      
 
       <div className="container">
         <div className="one-half column">
@@ -32,6 +35,8 @@ const eliminarCita = (id) => {
           <h2>ADMINISTRA TUS CITAS</h2>
           <ListaCitas citas={citas} eliminarCita={eliminarCita} />
         </div>
+      </div>
+      </div>
       </div>
     </>
   );
